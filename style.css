@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+}
+:root {
+  --container1-background-color: hsl(263, 55%, 52%);
+  --container2-background-color: hsl(217, 19%, 35%);
+  --container3-background-color: hsl(0, 0%, 100%);
+  --container4-background-color: hsl(219, 29%, 14%);
+  --container5-background-color: hsl(0, 0%, 100%);
+  --container-grid-background-color: hsl(210, 46%, 95%);
+  --container-text-font: hsl(0, 0%, 81%);
+}
+#container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container1 {
+  background-color: var(--container1-background-color);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  color: var(--container-text-font);
+  grid-column: 1 / 3;
+}
+.container2 {
+  background-color: var(--container2-background-color);
+  color: var(--container-text-font);
+  grid-column: 3 / 4;
+}
+.container3 {
+  background-color: var(--container3-background-color);
+
+  grid-column: 1 / 2;
+}
+.container4 {
+  background-color: var(--container4-background-color);
+  color: var(--container-text-font);
+  grid-column: 2 / 4;
+}
+.container5 {
+  background-color: var(--container5-background-color);
+  color: hsl(219, 29%, 14%);
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+#container > * {
+  padding: 20px;
+  border-radius: 10px;
+}
+.container-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.all-img {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+}
+.container-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  /* color: var(--container-text-font); */
+  gap: 5px;
+  font-weight: 500;
+}
+
+.black-text {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: hsl(219, 29%, 14%);
+}
+.black-text1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  opacity: 0.5;
+}
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.container-text p {
+  gap: 5px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+p {
+  gap: 5rem;
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.position {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 375px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
